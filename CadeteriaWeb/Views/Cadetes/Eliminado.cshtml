@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Eliminacion";
+}
+
+<div class="text-center">
+    <h3>Cadetes en la Base de datos Actualizada</h3>
+    <h3>EL cadete se elimino con exito</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th><th>Nombre</th><th>Dirrecion</th><th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                string path = @"C:\Users\facun\OneDrive\Escritorio\tp4\tl2-tp4-2022-Facas27\CadeteriaWeb\Cadetes.csv";
+                string[]leer = System.IO.File.ReadAllLines(path);}
+                @foreach (string item in leer)
+                {
+                    string[]datos = item.Split(";");
+                    <TR>
+                        <TD>@datos[0]</TD><TD>@datos[1]</TD><TD>@datos[2]</TD><TD>@datos[3]</TD>
+                    </TR>
+                }
+    </table>
+    
+    
+</div>

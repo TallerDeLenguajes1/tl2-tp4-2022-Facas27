@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Alta Cadetes";
+}
+
+<div class="text-center">
+    <h3>Subir Cadetes</h3>
+    <form action="Cadetes\AltaCadetes" method="post">
+        <label for="id">Id:
+            <input type="text" name="id" id="id" required>
+        </label>
+        <label for="nombre">Nombre:
+            <input type="text" name="nombre" id="nombre" required>
+        </label>
+        <label for="direccion">Direccion:
+            <input type="text" name="direccion" id="direccion" required>
+        </label>
+        <label for="telefono">Telefono:
+            <input type="text" name="telefono" id="telefono" required>
+        </label>
+        <input type="submit" value="Subir">
+    </form>
+
+    
+</div>
